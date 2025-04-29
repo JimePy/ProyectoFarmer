@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="estilos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(100px);  /* y: 100 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#titulo2 {
+  animation: slide-up-fade linear both;
+  animation-timeline: view();
+  animation-range: entry 60% exit -40%;
+}
+
+@keyframes slide-x-fade {
+  from {
+    opacity: 0;
+    transform: translateX(var(--fromX));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#caracteristicasdesc p {
+  animation: slide-x-fade cubic-bezier(.42,0,.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 80% exit -200%;
+  animation-duration: 1s;
+}
+
+#caracteristicasdesc p:nth-child(odd)  { --fromX: -100%; }
+#caracteristicasdesc p:nth-child(even) { --fromX:  100%; }
+
+
+
+    </style>
 </head>
 <body>
     
@@ -30,7 +72,7 @@
 
     <div class="video-container">
         <video autoplay loop muted width="640" height="360">
-          <source src="./imagenes y videos/videofarmer.mp4" type="video/mp4">
+            <source src="./imagenes y videos/videofarmer.mp4" type="video/mp4">
         </video>
         <div class="texto-encima">
             <h1 id="texto1">FarmerBot 2.0 es la nueva tecnología que proporcionará ayuda a
@@ -56,7 +98,7 @@
 
     <div class="banner">
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/DpWB1zYAP8Cd4Hl0/scene.splinecode"></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/DpWB1zYAP8Cd4Hl0/scene.splinecode"></spline-viewer>
     </div>
     
     <style>

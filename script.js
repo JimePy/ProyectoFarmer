@@ -17,7 +17,7 @@ gsap.from("#titulo1", {
     }
 });
 
-gsap.from("#titulo2", {
+/* gsap.from("#titulo2", {
     opacity: 0,
     y: 100,
     duration: 1.5,
@@ -30,7 +30,7 @@ gsap.from("#titulo2", {
         scrub: 1,
     }
 });
-
+ */
 gsap.from("#texto1", {
     opacity: 0,
     scale: 0.9,
@@ -68,7 +68,7 @@ gsap.from("#caracteristicas", {
     }
 });
 
-// Animación intercalada para cada cuadro de característica
+/* // Animación intercalada para cada cuadro de característica
 gsap.utils.toArray("#caracteristicasdesc p").forEach((cuadro, index) => {
     const fromVars = {};
     const toVars = {
@@ -95,4 +95,4 @@ gsap.utils.toArray("#caracteristicasdesc p").forEach((cuadro, index) => {
     }
 
     gsap.fromTo(cuadro, fromVars, toVars);
-});
+}); */
